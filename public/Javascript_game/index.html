@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Maker Game</title>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+   
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: 'Luckiest Guy', cursive;
+  background-color: #eee;
+  background-image: url('backgroundpic.jpg'); 
+  background-size: cover; 
+  background-position: center;  
+  background-repeat: repeat; 
+  color: #111;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 120%; 
+
+}
+html, body {
+    width: 100%; 
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+}
+
+
+.score, #dragger2 {
+  margin: 0;
+  padding: 0;
+  width: 100%; 
+}
+
+.score {
+  
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin: 1rem;
+  position: relative;
+  transition: opacity 0.2s;
+
+  
+  overflow: auto;
+}
+.playfulButton {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff9800;
+    border: 5px double #fff;
+    border-radius: 14px;
+    padding: 15px 30px;
+    outline: none;
+    letter-spacing: .05em;
+    cursor: pointer;
+    opacity: 1; 
+    transition: opacity 0.5s, transform 0.5s, background-color 0.2s;
+}
+.hiddenButton {
+    display: none;
+}
+
+.playfulButton:hover {
+  background-color: rgb(228, 217, 17);
+}
+.playfulButton:active {
+  background-color: #d00c0c;
+}
+.playfulButton.play_again-entrance {
+  opacity: 1;
+  transform: translateX(6rem);
+}
+
+.active-mission {
+  border: 3px solid red; 
+}
+
+.griddy {
+    flex: 3; 
+    transition: opacity 0.5s; 
+    
+}
+.griddies {
+  height: 5rem;
+  width: 60rem;
+  margin: 0.5rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+.griddies span {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  user-select: none;
+}
+.baby-pair {
+  height: 5rem;
+  width: 30rem;
+  margin: 0.5rem auto;
+  display: flex;
+  justify-content: center;
+}
+.infant-pair {
+  height: 10rem;
+  width: 30rem;
+  margin: 0.5rem auto;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center; 
+  font-size: 1.5rem; 
+  color: white; 
+  flex-direction: column; 
+}
+.baby-pair span {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  user-select: none;
+}
+.label {
+  width: 15rem;
+  font-size: 2rem;
+}
+.droppable {
+
+  background-color: #fff;
+
+}
+.droppable-hover {
+  background-color: #bee3f0;
+  transform: scale(1.1);
+}
+.dropped {
+  border-style: solid;
+}
+.dragged {
+  user-select: none;
+  opacity: 0.1;
+  cursor: default;
+}
+
+
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+    #play_again {
+        top: -0.4rem;
+    }
+    #play_again.play_again-entrance {
+        transform: translateX(7rem);
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: row; 
+        gap: 1rem; 
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .griddy, .score, #dragger2 {
+        
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+
+.basic {
+  background-image: url('assignment_assets/assets/tiles/base_tile.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.forest {
+  background-image: url('assignment_assets/assets/tiles/forest_tile.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.mountain {
+  background-image: url('assignment_assets/assets/tiles/mountain_tile.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+}
+.farm {
+  background-image: url('assignment_assets/assets/tiles/plains_tile.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.town {
+  background-image: url('assignment_assets/assets/tiles/village_tile.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.water {
+  background-image: url('assignment_assets/assets/tiles/water_tile.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.Borderlands {
+  background-image: url('assignment_assets/assets/missions_eng/Borderlands.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.EdgeOfTheForest {
+  background-image: url('assignment_assets/assets/missions_eng/EdgeOfTheForest.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.EmptySite {
+  background-image: url('assignment_assets/assets/missions_eng/EmptySite.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.MagiciansValley {
+  background-image: url('assignment_assets/assets/missions_eng/MagiciansValley.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.OddNumberedSilos {
+  background-image: url('assignment_assets/assets/missions_eng/OddNumberedSilos.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.RichCountryside {
+  background-image: url('assignment_assets/assets/missions_eng/RichCountryside.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.RowOfHouses {
+  background-image: url('assignment_assets/assets/missions_eng/RowOfHouses.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.EncircleMountain {
+  background-image: url('assignment_assets/assets/missions_eng/EncircleMountain.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.SleepyValley {
+  background-image: url('assignment_assets/assets/missions_eng/SleepyValley.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.TreeLine {
+  background-image: url('assignment_assets/assets/missions_eng/TreeLine.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.WateringCanal {
+  background-image: url('assignment_assets/assets/missions_eng/WateringCanal.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.WateringPotatoes {
+  background-image: url('assignment_assets/assets/missions_eng/WateringPotatoes.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.WealthyTown {
+  background-image: url('assignment_assets/assets/missions_eng/WealthyTown.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+
+.cell {
+  width: 6rem;
+  font-size: 4rem;
+  border: 3px #111;
+  transition: 0.2s;
+}
+.container {
+    display: flex;
+}
+
+.flex-container {
+  display:flex;
+  gap: 1rem;
+  margin: 1rem
+}
+.score span {
+  display: block; 
+  margin-bottom: 0.5rem; 
+}
+
+.right-sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    flex: 1;
+}
+#play-again-button {
+  width: 100%; 
+  display: flex;
+  justify-content: center; 
+  margin-top: 1rem; 
+  
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr; 
+    grid-template-rows: min-content min-content; 
+    gap: 1rem;
+    margin: 1rem;
+    align-items: start
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="right-sections">
+    <section class="score">
+        <span id="timeTotal"></span>
+        <span id="seasonTime"></span>
+        
+        <span id="seasonName"></span>
+        <span id="scoreTotal"></span>
+      </section>
+      <section id="play-again-button">
+        <button id="rotate" class="playfulButton">Rotate</button>
+        <button id="play_again" class="playfulButton  hiddenButton">Play Again</button>
+        <button id="mirror" class="playfulButton">Mirror</button>
+      </section>
+      <section  id="dragger2">
+       
+      </section>
+      <section id="missions_">
+        
+      </section>
+    </div>
+
+      <section class="griddy" id="grid">
+     
+      </section>
+    </div>
+      <script src="missions.js"></script>
+      <script src="elements.js"></script>
+      <script src="index.js"></script>
+</body>
+</html>
