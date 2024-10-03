@@ -1,0 +1,234 @@
+@media only screen and (max-width: 600px) {
+
+    .gallery-title {
+        text-align: center;
+        font-size: 2rem; /* Adjust as needed */
+    }
+    .gallery-subtitle {
+        text-align: center;
+        font-size: 1.2rem; /* Adjust as needed */
+        font-weight: normal; /* For a thinner font style */
+    }
+    
+    .section {
+        text-align: center;
+        margin-top: 0rem;
+    }
+    .image-container {
+        display: grid;
+        justify-content: space-evenly;
+        /*margin-top: 1vh; */
+    }
+    .image-caption {
+        text-align: center;
+        font-size: 1rem; /* Adjust as needed */
+    }
+    
+    
+    
+    .centered-text {
+        position: absolute;
+        bottom: 0rem; /* Position at the bottom of the container */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        padding: 0 0.1rem; /* Add some padding to make the highlight extend beyond the text */
+        box-decoration-break: clone; /* Ensures background extends to each line on line breaks */
+    }
+    .big-image-container {
+        position: relative;
+        text-align: center;
+        background-size: cover; /* Ensures the background image covers the entire div */
+        
+        background-position: 50% 50%; /* Centers the background image */
+        width: 100%;
+        height: 30rem; /* Adjust the height as needed */ 
+    }
+    
+    .big-title {
+        /* position: absolute; */
+        /* bottom: 3.5rem; */
+        position: inherit;
+        top: 0rem;
+        padding: 0;
+        transform: translateX(-50%);
+        bottom: 10rem;
+      }
+    
+    .menu {
+        text-align: center;
+        margin-top: 0.8rem;
+        font-size: 1.3rem
+    }
+    
+    .submenu {
+        font-size: 1.1rem
+    }
+    
+    .news-section {
+        display: grid;
+        /*margin-top: 20px; */
+    }
+    .news-item {
+        width: 100%;
+        text-align: center;
+    
+    }
+    .video-section {
+    /* max-width: 55%; */
+	max-width: 95%;
+
+      }
+      
+    
+      .social-links {
+        /* gap: 1rem; */
+        
+        gap: 2rem;
+        margin-bottom: 1rem;
+      }
+    
+    .discography-table {
+        width: 90%; /* Adjust as needed */
+        margin: 0 auto; /* Centers the table */
+        text-align: center; /* Aligns text in cells */
+    }
+    
+    .discography-table th, .discography-table td {
+        padding: 0rem; /* Spacious padding for cells */
+        vertical-align: middle; /* Vertically centers content */
+    }
+    
+    
+    .contact-form {
+        text-align: center;
+        margin: 2rem;
+    }
+    
+    .form-section {
+        margin-bottom: 1.2rem;
+    }
+    
+    .form-section label, .form-section input[type="text"], .form-section textarea {
+        display: inline-block; /* Aligns elements in a line */
+        vertical-align: top; /* Aligns elements at their top */
+        margin: 0 auto;
+    }
+    
+    .inline-inputs label, .inline-inputs input[type="text"], .inline-inputs input[type="radio"], .inline-inputs input[type="checkbox"] {
+        display: inline-block; /* Aligns elements in a line */
+        margin-right: 0.6rem; /* Spacing between inline elements */
+    }
+    
+    input[type="text"], textarea {
+        width: 60%; /* Adjust width as needed */
+        max-width: 15rem;
+    }
+    
+    textarea {
+        height: auto; /* Adjust height based on rows attribute */
+    }
+    
+    input[type="submit"], input[type="reset"] {
+        margin-right: 1rem; /* Spacing between buttons */
+    }
+
+    footer, header {
+        /* display: flex; */
+        /* justify-content: space-between; */
+        display: grid;
+        justify-content: space-evenly;
+        
+        text-align: center;
+      }
+      footer > div:nth-child(3) {
+        gap: 1rem;
+        
+      }
+      
+    
+    
+    .news-item img, .image-container img {
+
+      /* Align the image properly in its frame */
+       max-width: 90vw;
+    
+    }
+    
+    .image-container img {
+       
+       height: auto;
+       max-width: 100vw;
+       max-height: 50vh;
+    
+    }
+    
+    html {
+        font-size: 100%;
+        
+    }
+    
+    
+    h1 {
+        /* font-size: 2.5rem; */
+        font-size: 2.1rem;
+      }
+    
+    
+    h2 {
+        font-size: 2rem; /* Slightly smaller than h1 */
+        margin:0;
+        margin-top:1rem;
+    }
+    
+    h3 {
+        font-size: 1.75rem; /* Smaller than h2 */
+    }
+    
+    h4 {
+        font-size: 1.5rem; /* Smaller than h3 */
+    }
+    
+    h5 {
+        font-size: 1.25rem; /* Smaller than h4 */
+    }
+    
+    h6 {
+        font-size: 1rem; /* Smallest heading, often the same size as normal text */
+    }
+    
+    caption, summary {
+        margin-top: 2rem;  /* Adjust the top margin as needed */
+        margin-bottom: 1rem;  /* Adjust the bottom margin as needed */
+        text-align: left;
+        font-size: 1rem; /* Adjust as needed */
+    }
+    caption {
+        text-align: center;
+    }
+    
+    /*#themeToggle {
+        position: absolute;
+        top: 0.5rem; /* Adjust as needed */
+      /*  left: 0.5rem; /* Adjust as needed */
+     
+    /*} */
+    
+    
+
+    
+    .paragraph {
+        /* margin-left: 4rem; */
+        /* margin-right: 4rem; */
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+    
+}
+
+
+
+
+/* checked by https://jigsaw.w3.org/css-validator/ and it's valid*/

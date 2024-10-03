@@ -1,0 +1,44 @@
+.centered-text {
+    background-color: black; 
+}
+
+.big-title {
+ 
+    background-color: black;; 
+
+}
+
+
+.discography-table tbody td {
+    background-color: black; 
+}
+.discography-table th, .discography-table td {
+    border: 1px solid white; /* should be whit€ */
+}
+
+
+html {
+    background-color: black;
+    color: white; /* should be whit€ */
+    font-size: 115%;
+    font-weight: 600;
+    
+}
+
+/* Unvisited links */
+a:link {
+    color: rgb(237, 210, 4); /* Color for unvisited links 88, 7, 88 */
+}
+
+/* Visited links */
+a:visited {
+    color: rgb(255, 156, 44); /* Color for visited links */
+}
+
+
+
+button, input[type="submit"], input[type="reset"] {
+    color: white; /* should be whit€ */
+    background-color: black;
+   
+}
