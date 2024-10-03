@@ -1,0 +1,44 @@
+.centered-text {
+    background-color: #380156; /* Set background (highlight) color to black */
+}
+
+.big-title {
+ 
+    background-color: #380156;; /* Set background (highlight) color to black */
+
+}
+
+
+.discography-table tbody td {
+    background-color: #380156; /* Light lavender color for regular cells */
+}
+.discography-table th, .discography-table td {
+    border: 1px solid white;
+}
+
+
+html {
+    background-color: #380156;
+    color: white;
+    
+}
+
+/* Unvisited links */
+a:link {
+    color: rgb(237, 210, 4); /* Color for unvisited links 88, 7, 88 */
+}
+
+/* Visited links */
+a:visited {
+    color: rgb(255, 156, 44); /* Color for visited links */
+}
+
+
+
+button, input[type="submit"], input[type="reset"] {
+    color: white; /* Set text color to white */
+    background-color: #380156;
+   
+}
+
+/* checked by https://jigsaw.w3.org/css-validator/ and it's valid*/

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Contact - Swiftie Central</title>
+    <link rel="stylesheet" type="text/css" href="base.css">
+    <link rel="stylesheet" type="text/css" href="tablet.css">
+<link rel="stylesheet" type="text/css" href="phone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        
+        <button id="themeToggle">Toggle Theme</button>
+        <a href="#form_start">Skip to content</a>
+        <button id="disability">Visually Impaired</button>
+</header>
+    <h1 class="gallery-title">Contact - Reach out to Fellow Swifties</h1>
+     
+
+    <nav class="menu">
+        <a href="index.html">Home</a> |
+        <a href="gallery.html">Gallery</a> |
+        <a href="discography.html">Discography</a> |
+        Contact
+    </nav>
+
+    <!-- Contact Form -->
+    <form class="contact-form" action="https://formspree.io/f/xleyqgyl" method="post">
+        <!-- Name Section -->
+        <div class="form-section" id="form_start">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="First and Last Name">
+           <span class="error" id="name-error"></span> <!-- Error message span for name -->
+        </div>
+
+        <!-- Preferred Contact Method Section -->
+        <div class="form-section">
+                <label>Preferred Contact Method:</label>
+
+            
+            <div class="inline-inputs">
+                <input type="radio" id="contact-email" name="contact-method" value="email" checked>
+                <label for="contact-email">Email</label>
+                <input type="text" name="email">
+            </div>
+            <span class="error" id="email-error"></span> <!-- Error message span for contact -->
+
+            <div class="inline-inputs">
+                <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                <label for="contact-phone">Phone</label>
+                <input type="text" name="phone">
+            </div>
+            <span class="error" id="phone-error"></span> <!-- Error message span for contact -->
+
+        </div>
+
+        <!-- Message Section -->
+        <div class="form-section">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="7" placeholder="Your message here"></textarea>
+           <span class="error" id="message-error"></span> <!-- Error message span for contact -->
+
+        </div>
+
+        <!-- Newsletter Section -->
+        <div class="form-section">
+            <div class="inline-inputs">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Subscribe to Newsletter</label>
+            </div>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="form-section">
+            <div class="inline-inputs">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+    
+    <aside class="paragraph">
+        At Swiftie Central, we endeavor to provide accurate and engaging content for our community. However, we advise our cherished visitors to <b>cross-reference</b> with other reliable sources for confirmation, as we <b>cannot guarantee</b> the infallibility of the information provided. Should you encounter any discrepancies, we warmly invite you to <b>inform us</b> through this contact form, aiding us in refining our content to better serve the Taylor Swift fan community.
+    </aside>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2023 Swiftie Central. All rights reserved</p>
+        <div class="social-links">
+            <!-- Social Media Icons (links) -->
+            <a href="https://www.facebook.com/TaylorSwift/"> Facebook </a>
+            <a href="https://twitter.com/taylorswift13">Twitter</a>
+            <a href="https://www.instagram.com/taylorswift/?hl=en">Instagram</a>
+        </div>
+        <div>
+            <a href="documents/terms_of_service.pdf">Terms of Service</a> | 
+            <a href="documents/privacy_policy.pdf">Privacy Policy</a>
+        </div>
+    </footer>
+    <script src="themes.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>

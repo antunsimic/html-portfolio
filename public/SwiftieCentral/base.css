@@ -1,0 +1,315 @@
+
+.gallery-title {
+    text-align: center;
+    font-size: 2.5rem; /* Adjust as needed */
+}
+.gallery-subtitle {
+    text-align: center;
+    font-size: 1.25rem; /* Adjust as needed */
+    font-weight: normal; /* For a thinner font style */
+}
+
+.section {
+    text-align: center;
+    margin-top: 2rem;
+}
+.image-container {
+    display: flex;
+    justify-content: space-evenly;
+    /*margin-top: 1vh; */
+    
+}
+.image-caption {
+    text-align: center;
+    font-size: 1rem; /* Adjust as needed */
+
+}
+
+
+
+.centered-text {
+    position: absolute;
+    bottom: 0rem; /* Position at the bottom of the container */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    color: white; /* Set text color to white */
+    background-color: #4b2e83; /* Set background (highlight) color to black */
+    padding: 0 0.1rem; /* Add some padding to make the highlight extend beyond the text */
+    box-decoration-break: clone; /* Ensures background extends to each line on line breaks */
+}
+.big-image-container {
+    position: relative;
+    text-align: center;
+    background-image: url('images/alternate_background.webp');
+    background-size: cover; /* Ensures the background image covers the entire div */
+    
+    background-position: 40% 60%; /* Centers the background image */
+    width: 100%;
+    height: 30rem; /* Adjust the height as needed */ 
+}
+
+.big-title {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; /* Set text color to white */
+    background-color:  #4b2e83; /* Set background (highlight) color to black */
+    padding: 0; /* Add some padding to make the highlight extend beyond the text */
+    box-decoration-break: clone; /* Ensures background extends to each line on line breaks */
+    top: 3rem;
+}
+.menu {
+    text-align: center;
+    margin-top: 0.8rem;
+    font-size: 1.5rem
+}
+
+.submenu {
+    font-size: 1.1rem
+}
+
+.news-section {
+    display: flex;
+    justify-content: space-between;
+    /*margin-top: 20px; */
+}
+.news-item {
+    width: 32%; /* Adjust based on actual layout */
+}
+
+.news-item p {
+    text-align: center;
+}
+.video-section {
+    display: block; /* Use block display to allow margin auto to work */
+    max-width: 55%; /* Set a maximum width for the video */
+    height: auto; /* Maintain aspect ratio */
+    margin: 2rem auto; /* Apply top margin and center horizontally */
+    text-align: center;
+  }
+  
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.discography-table {
+    width: 90%; /* Adjust as needed */
+    margin: 0 auto; /* Centers the table */
+    text-align: center; /* Aligns text in cells */
+    border-collapse: collapse;
+}
+
+.discography-table th, .discography-table td {
+    padding: 1.5rem; /* Spacious padding for cells */
+    vertical-align: middle; /* Vertically centers content */
+    border: 1px solid #4b2e83;
+}
+
+.discography-table thead th {
+    background-color: #4b2e83; /* Dark purple color for the header */
+    color: white; /* White text color for header */
+}
+
+.discography-table tbody td {
+    background-color: #e6e6fa; /* Light lavender color for regular cells */
+}
+
+.contact-form {
+    text-align: center;
+    margin: 2rem;
+}
+
+.form-section {
+    margin-bottom: 1.2rem;
+    display: flex; /* Make the form section a flex container */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+}
+input[type="text"], textarea {
+    width: 15rem; /* Adjust width as needed */
+}
+.error {
+    display: block;
+    width: fit-content; /* Fixed width for error message */
+    min-height: 1em; /* Minimum height to align with input fields */
+    color: red; /* Error message color */
+    visibility: hidden; /* Initially invisible */
+    text-align: center; /* Center the text within the error message */
+    margin-top: 10px; /* Add a little space above the error message */
+
+}
+.inline-inputs {
+    display:flex;
+    flex-direction:row;
+    align-items:center; 
+}
+
+
+/*
+html, body {
+    height: 100%; /* Ensure the full height of the viewport is used 
+ /*   margin: 0; /* Reset default margins 
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+/*}
+/*
+
+body > *:not(footer) {
+    flex: 1; /* Make all elements except footer take up available space 
+}
+*/
+footer, header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Push the footer to the bottom */
+    /* Rest of your footer styles */
+} 
+
+
+.news-item img, .image-container img {
+   /* width: 100%;  Adjust width as needed */
+   /* height: auto; /* Maintain aspect ratio */
+   /* display: block; /* Remove any default inline spacing */
+   /* margin: 0 auto; /* Center the image if needed */
+   width: auto; /* Fixed width */
+   height: 18rem; /* Height adjusts to maintain aspect ratio */
+   
+   display: block; /* Remove any default inline spacing */
+ /*  margin: 0 auto; /* Center the image if needed */
+   object-fit: cover; /* This property ensures the image covers the area without distortion */
+   object-position: center; /* Align the image properly in its frame */
+   max-width: 30vw;
+
+}
+
+.image-container img {
+    max-width: 46vw;
+    height: 65vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+figcaption {
+    object-position: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+ 
+
+figure {
+    margin:0;
+    object-position: center;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    max-width: 50vw;
+}
+html {
+    font-family: 'Lora', serif, sans-serif;
+    background-color: #e6e6fa;
+    font-size: 100%;
+    
+}
+article {
+    page-break-before: always; /* Always start a new page before the image */
+}
+/* Unvisited links */
+a:link {
+    color: rgb(12, 12, 174); /* Color for unvisited links 88, 7, 88 */
+}
+
+#message {
+    height: 12rem;
+  }
+  
+
+/* Visited links */
+a:visited {
+    color: rgb(70, 4, 111); /* Color for visited links */
+}
+
+h1 {
+    font-size: 3rem; /* Larger font size for main title */
+}
+
+h2 {
+    font-size: 2rem; /* Slightly smaller than h1 */
+}
+
+h3 {
+    font-size: 1.75rem; /* Smaller than h2 */
+}
+
+h4 {
+    font-size: 1.5rem; /* Smaller than h3 */
+}
+
+h5 {
+    font-size: 1.25rem; /* Smaller than h4 */
+}
+
+h6 {
+    font-size: 1rem; /* Smallest heading, often the same size as normal text */
+}
+
+caption, summary {
+    margin-top: 2rem;  /* Adjust the top margin as needed */
+    margin-bottom: 1rem;  /* Adjust the bottom margin as needed */
+    text-align: left;
+    font-size: 1rem; /* Adjust as needed */
+}
+caption {
+    text-align: center;
+}
+
+/*#themeToggle, #disability {
+    position: relative;
+    top: 0.5rem; /* Adjust as needed */
+  /*  left: 0.5rem; /* Adjust as needed */
+ 
+/*} */
+
+.header-buttons {
+
+    display: flex;
+    gap: 0.5rem; /* Adjust the gap as needed */
+}
+
+
+button, input[type="submit"], input[type="reset"] {
+    color: black; /* Set text color to white */
+    background-color: #e6e6fa;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+aside {
+    font-style: italic;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif; /* Explicitly set to a sans-serif font */
+    font-size: 0.95rem; /* Example size for smaller text */
+   
+}
+
+.paragraph {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+/* checked by https://jigsaw.w3.org/css-validator/ and it's valid*/
+
+
+
+
